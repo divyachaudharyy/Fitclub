@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./Testimonials.css";
-import { testimonialsData } from "../../data/testimonialsData";
-import {leftarrow} from "../../assets/leftArrow.png"
-import {rightarrow} from "../../assets/rightArrow.png"
+import { testimonialsData} from "../../data/testimonialsData";
+import leftarrow from "../../assets/leftArrow.png"
+import rightarrow from "../../assets/rightArrow.png"
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 

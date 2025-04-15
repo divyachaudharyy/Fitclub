@@ -1,7 +1,7 @@
 import React from "react";
 import { plansData } from "../../data/plansData";
 import "./Plans.css";
-import {whiteTick} from "../../assets/whiteTick.png"
+import whiteTick from "../../assets/whiteTick.png"
 
 const Plans = () => {
   return (
