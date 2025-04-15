@@ -2,11 +2,11 @@ import React from "react";
 // import { loadingAnimation } from "../../utils/gsapAnimation";
 import "./Hero.css";
 // eslint-disable-next-line no-unused-vars
-import heroimage from "../../assets/hero_image.png";
-import heroimageback from "../../assets/hero_image_back.png";
-import calories from "../../assets/calories.png";
-import heart from "../../assets/heart.png";
-
+import { motion } from "framer-motion";
+import  heroimage from "../../assets/hero_image.png";
+import  heroimageback  from "../../assets/hero_image_back.png";
+import calories  from "../../assets/calories.png";
+import  heart  from "../../assets/heart.png";
 
 import Header from "../Header/Header";
 
