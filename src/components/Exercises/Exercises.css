@@ -1,0 +1,124 @@
+.heading {
+  display: flex;
+
+  font-weight: bold;
+  font-size: 3rem;
+  justify-content: center;
+  color: white;
+  text-transform: uppercase;
+  font-style: italic;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.search-form {
+  max-width: 58rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  inset-block: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding-left: 0.75rem;
+  pointer-events: none;
+}
+
+.search-svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  color: #6b7280; /* gray-500 */
+}
+
+.search-input {
+  display: block;
+  width: 100%;
+  padding: 1rem 1rem 1rem 2.5rem;
+  font-size: 1rem;
+  color: #111827; /* gray-900 */
+  border: 1px solid #d1d5db; /* gray-300 */
+  border-radius: 0.5rem;
+  background-color: #f9fafb; /* gray-50 */
+}
+
+.search-input:focus {
+  outline: none;
+
+  box-shadow: 0 0 0 3px rgb(244, 137, 21);
+}
+
+.search-button {
+  position: absolute;
+  right: 0.625rem;
+  bottom: 0.625rem;
+  background-color: rgb(244, 137, 21); /* blue-700 */
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: rgb(244, 137, 21); /* blue-800 */
+}
+
+.search-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px gray;
+}
+
+.no-results {
+  text-align: center;
+  font-size: large;
+  margin-top: 3rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.reset-btn {
+  margin-top: 2rem;
+  padding: 0.5rem;
+  font-weight: bold;
+
+  background-color: var(--orange);
+  color: white;
+  width: 125px;
+  border: 4px solid transparent;
+
+  cursor: pointer;
+}
+@media screen and (max-width: 768px){
+  .heading{
+    text-align: center;
+    font-size: x-large;
+  }
+  .search-container{
+    margin: 2rem;
+  }
+  .exercises{
+    margin-top: 4rem;
+
+  }
+}

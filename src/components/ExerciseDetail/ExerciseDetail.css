@@ -1,0 +1,275 @@
+.exercise-detail-container {
+  background-image: url('/your-fitness-bg.jpg'); /* Replace with actual path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  mix-blend-mode: overlay;
+  background-color: var(--appColor);
+  padding: 2rem;
+  overflow: hidden;
+  min-height: 100vh;
+  animation: fadeIn 0.8s ease-in;
+}
+
+/* Fade animation on load */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+
+.exercise-gif-big {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: center;
+  background: white;
+  padding: 1.5rem;
+  border: 3.4px dashed var(--orange);
+  /* border-radius: 20px; */
+  transform: rotate(-2deg);
+  box-shadow: 0 12px 45px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease-in-out;
+  backdrop-filter: blur(4px);
+}
+
+.exercise-gif-big:hover {
+  transform: rotate(0deg) scale(1.01);
+}
+
+.exercise-gif-big > img {
+  height: 30rem;
+  border-radius: 15px;
+  filter: grayscale(8%) contrast(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.exercise-gif-big > img:hover {
+  transform: scale(1.015);
+}
+
+
+
+@keyframes scaleIn {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.instructions {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.instructions > h2 {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  animation: fadeIn 1s ease-in;
+}
+
+.instructions > h2 > svg {
+  fill: white;
+  height: 3rem;
+  width: 2.5rem;
+}
+
+.instructions > ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  animation: fadeIn 1.2s ease-in;
+}
+
+li {
+  margin: 0.4rem 0;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid var(--orange);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* EXERCISE INFO BELOW */
+
+.exercise-info {
+  margin-top: 6rem;
+  color: white;
+}
+
+.exercise-info h3 {
+  text-transform: capitalize;
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.video-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.video-section a {
+  text-decoration: none;
+  color: white;
+  width: 18rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-section a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(255, 165, 0, 0.2);
+}
+
+.video-section img {
+  width: 100%;
+  border-radius: 15px;
+  border: 3px solid var(--orange);
+}
+
+.video-section p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #e0e0e0;
+}
+
+/* SIMILAR EXERCISES */
+
+.similar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.similar-grid a {
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.similar-grid a:hover {
+  transform: translateY(-5px);
+}
+
+.similar-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 25px;
+  border: 3px solid var(--orange);
+  margin-bottom: 0.5rem;
+}
+
+.similar-grid p {
+  font-size: 1.1rem;
+  text-transform: capitalize;
+}
+
+
+@media screen and (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .exercise-gif-big {
+    width: 100%;
+    flex: none;
+    padding: 1rem;
+    transform: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .exercise-gif-big > img {
+    height: auto;
+    width: 100%;
+    border-radius: 15px;
+  }
+
+  .instructions {
+    width: 100%;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .instructions > h2 {
+    font-size: 1.8rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .instructions > ul {
+    font-size: 1rem;
+    line-height: 1.8rem;
+    padding-left: 1rem;
+  }
+
+  .exercise-info {
+    margin-top: 4rem;
+  }
+
+  .exercise-info h3 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .video-section {
+    justify-content: center;
+  }
+
+  .video-section a {
+    width: 100%;
+    max-width: 20rem;
+  }
+
+  .similar-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .similar-grid a {
+    font-size: 0.95rem;
+  }
+
+  .similar-grid img {
+    border-radius: 20px;
+  }
+}
+

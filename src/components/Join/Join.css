@@ -1,0 +1,61 @@
+.join{
+    display: flex;
+    padding: 0 2rem;
+    gap: 10rem;
+}
+.left-j{
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+}
+.left-j>hr{
+    position: absolute;
+    width: 10.5em;
+    border: 2px solid var(--orange);
+    border-radius: 20%;
+    margin: -10px 0;
+}
+.right-j{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.email-container{
+    display: flex;
+    gap: 3rem;
+    background-color: gray;
+    padding: 1rem 2rem;
+}
+.email-container>input{
+    background-color: initial;
+    border: none;
+    outline: none;
+    color: var(--lightgray);
+    /* caret-color: black; */
+}
+::placeholder{
+    color: var(--lightgray);
+}
+.btn-j{
+    background-color: var(--orange)!important;
+    color: white!important;
+}
+@media screen and (max-width: 768px) {
+    .join{
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .left-j{
+        font-size: x-large;
+    }
+    .left-j>hr{
+        width: 9rem;
+    }
+    .btn-j{
+        font-size: x-small;
+    }
+  
+  
+}

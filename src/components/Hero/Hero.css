@@ -1,0 +1,231 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+}
+.left {
+  flex: 3;
+  padding: 2.5vw;
+  display: flex;
+  gap: 3vw;
+  flex-direction: column;
+}
+.right {
+  flex: 1;
+  position: relative;
+  background-color: var(--orange);
+}
+.the-best-ad {
+  margin-top: 3vw;
+  background-color: #363d42;
+  border-radius: 40px;
+  width: fit-content;
+  padding: 20px 13px;
+  text-transform: uppercase;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+.the-best-ad span {
+  z-index: 1;
+}
+.the-best-ad div {
+  background-color: var(--orange);
+  position: absolute;
+  width: 70px;
+  height: 80%;
+  left: 8px;
+  border-radius: 40px;
+  z-index: 0;
+}
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw;
+  font-size: 5vw;
+  text-overflow: inherit;
+  font-weight: bold;
+  color: white;
+}
+.in-here {
+  font-size: 1.2vw;
+  font-weight: 200;
+  text-transform: none;
+  letter-spacing: 1px;
+  width: 80%;
+}
+.figures {
+  display: flex;
+  gap: 3vw;
+}
+.figures div {
+  display: flex;
+  flex-direction: column;
+}
+.figures div span:nth-of-type(1) {
+  color: white;
+  font-size: 2.5vw;
+}
+.figures div span:nth-of-type(2) {
+  color: var(--gray);
+  text-transform: uppercase;
+}
+.hero-buttons {
+  display: flex;
+  gap: 3vw;
+  font-weight: normal;
+}
+.hero-buttons > :nth-child(1) {
+  color: white;
+  background-color: var(--orange);
+  width: 125px;
+}
+.hero-buttons > :nth-child(2) {
+  color: white;
+  background-color: transparent;
+  width: 125px;
+  border: 2px solid var(--orange);
+}
+
+.right button {
+  position: absolute;
+  top: 3vw;
+  right: 3vw;
+}
+.heart-rate {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  background-color: var(--darkGrey);
+  gap: 1.4rem;
+  /* gap: 1.5vw; */
+  width: fit-content;
+  padding: 12px 15px;
+  border-radius: 5px;
+  position: absolute;
+
+  top: 9vw;
+}
+.heart-rate span:nth-of-type(1) {
+  color: var(--gray);
+}
+.heart-rate span:nth-of-type(2) {
+  color: white;
+  font-size: 25px;
+}
+.heart-rate img {
+  width: 35px;
+}
+.hero-image {
+  position: absolute;
+  top: 12vw;
+  right: 10rem;
+  width: 30vw;
+}
+.hero-image-back {
+  position: absolute;
+  top: 7.5vw;
+  right: 25vw;
+  z-index: -1;
+  width: 18vw;
+}
+.calories {
+  display: flex;
+  gap: 30px;
+  background-color: var(--caloryCard);
+  border-radius: 5px;
+  padding: 15px;
+  width: 250px;
+  position: absolute;
+  top: 35rem;
+}
+.calories img {
+  width: 3rem;
+}
+.calories div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.calories div > :nth-child(1) {
+  color: var(--gray);
+}
+.calories div > :nth-child(2) {
+  color: white;
+  font-size: 1.5vw;
+}
+
+.hero-blur {
+  width: 22rem;
+  height: 30rem;
+  left: 0;
+}
+@media screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+  .the-best-ad {
+    margin-top: 0;
+    font-size: small;
+    align-self: center;
+    transform: scale(0.8);
+  }
+
+  .hero-text {
+    font-size: xx-large;
+    justify-content: center;
+    align-items: center;
+  }
+  .in-here {
+    font-size: small;
+    font-weight: 200;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  .figures {
+    font-size: small;
+    margin-top: 20px;
+    justify-content: center;
+  }
+  .hero-buttons {
+    justify-content: center;
+  }
+  .right {
+    background: none;
+  }
+  .right button {
+    position: absolute;
+    right: 3rem;
+    top: 3rem;
+  }
+  .heart-rate {
+    left: 1rem;
+    top: 2rem;
+  }
+  .hero-image {
+    position: relative;
+    top: 5rem;
+    width: 15rem;
+    left: 8rem;
+    align-self: center;
+  }
+  .hero-image-back {
+    top: 0;
+    left: 2rem;
+    width: 15rem;
+  }
+  .calories {
+    position: relative;
+    top: 6rem;
+    left: 4rem;
+    justify-content: center;
+  }
+  .calories img {
+    width: 2rem;
+  }
+
+  .calories div > :nth-child(2) {
+    font-size: 1rem;
+  }
+}
