@@ -1,7 +1,7 @@
 import React from "react";
 import "./Programs.css";
 import { programsData } from "../../data/programsData";
-
+import {rightArrow} from "../../assets/rightArrow.png"
 const Programs = () => {
   return (
     <div className="programs" id="programs">
@@ -20,7 +20,7 @@ const Programs = () => {
               <span>{program.details}</span>
               <div className="join-now">
                 <span>Join Now</span>
-                <img src="src/assets/rightArrow.png" alt="Arrow" />
+                <img src={rightArrow} alt="Arrow" />
               </div>
             </div>
           );

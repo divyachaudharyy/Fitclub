@@ -1,6 +1,7 @@
 import React from "react";
 import { plansData } from "../../data/plansData";
 import "./Plans.css";
+import {whiteTick} from "../../assets/whiteTick.png"
 
 const Plans = () => {
   return (
@@ -21,7 +22,7 @@ const Plans = () => {
               <div className="features">
                 {plan.features.map((feature, i) => (
                   <div className="feature" key={i}>
-                    <img src="src\assets\whiteTick.png" alt="" />
+                    <img src={whiteTick} alt="" />
                     <span key={i}>{feature} </span>
                   </div>
                 ))}

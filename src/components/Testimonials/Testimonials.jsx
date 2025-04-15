@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./Testimonials.css";
 import { testimonialsData } from "../../data/testimonialsData";
-// import { testimonialsData } from "../../utils/data/testimonialsData";
+import {leftarrow} from "../../assets/leftArrow.png"
+import {rightarrow} from "../../assets/rightArrow.png"
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
@@ -44,7 +45,7 @@ const Testimonials = () => {
                 ? setSelected(length - 1)
                 : setSelected((prev) => prev - 1);
             }}
-            src="src\assets\leftArrow.png"
+            src={leftarrow}
             alt=""
           />
           <img
@@ -53,7 +54,7 @@ const Testimonials = () => {
                 ? setSelected(0)
                 : setSelected((prev) => prev + 1);
             }}
-            src="src\assets\rightArrow.png"
+            src={rightarrow}
             alt=""
           />
         </div>

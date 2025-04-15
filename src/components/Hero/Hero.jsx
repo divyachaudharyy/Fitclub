@@ -3,6 +3,10 @@ import React from "react";
 import "./Hero.css";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
+import {heroimage} from "../../assets/hero_image.png"
+import {heroimageback} from "../../assets/hero_image_back.png"
+import {calories} from "../../assets/calories.png"
+import {heart} from "../../assets/heart.png"
 
 import Header from "../Header/Header";
 
@@ -64,18 +68,18 @@ const Hero = () => {
           transition={transition}
           className="heart-rate"
         >
-          <img src="src\assets\heart.png" alt="" />
+          <img src={heart} alt="" />
           <span>Heart Rate</span>
           <span>116 bpm</span>
         </motion.div>
 
-        <img className="hero-image" src="src\assets\hero_image.png" alt="" />
+        <img className="hero-image" src={heroimage} alt="" />
         <motion.img
           initial={{ right: "11rem" }}
           whileInView={{ right: "20rem" }}
           transition={transition}
           className="hero-image-back"
-          src="src\assets\hero_image_back.png"
+          src={heroimageback}
           alt=""
         />
         <motion.div
@@ -84,7 +88,7 @@ const Hero = () => {
           transition={transition}
           className="calories"
         >
-          <img src="src\assets\calories.png" alt="" />
+          <img src={calories} alt="" />
           <div>
             <span>Calories Burned</span>
             <span>220 kcal</span>
